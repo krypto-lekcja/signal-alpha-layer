@@ -93,10 +93,10 @@ const RoadmapSection = () => {
     <section id="roadmap" className="signal-section bg-gradient-to-b from-background to-card/20">
       <div className="signal-container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in-up">
             <span className="signal-text-gradient">SIGNAL</span> Roadmap
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
             Our journey to becoming the leading decentralized hedge fund protocol
           </p>
         </div>
@@ -107,7 +107,7 @@ const RoadmapSection = () => {
             const PhaseIcon = phase.icon;
             
             return (
-              <div key={index} className="signal-card hover:signal-glow transition-all duration-500">
+              <div key={index} className={`signal-card hover:signal-glow transition-all duration-300 hover-glow-intense animate-fade-in-right animate-delay-${(index + 1) * 100}`}>
                 <div className="flex items-start space-x-4">
                   {/* Phase Icon */}
                   <div className="flex-shrink-0">
@@ -141,7 +141,7 @@ const RoadmapSection = () => {
                           <div className="flex-shrink-0 mt-2">
                             <div className="w-2 h-2 bg-primary rounded-full group-hover:scale-150 transition-transform duration-200" />
                           </div>
-                            <p className="text-muted-foreground leading-relaxed">
+                          <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-200">
                             {item}
                           </p>
                         </div>
@@ -156,9 +156,9 @@ const RoadmapSection = () => {
 
         {/* Vision Statement */}
         <div className="mt-16 text-center">
-          <div className="signal-card max-w-4xl mx-auto">
+          <div className="signal-card max-w-4xl mx-auto hover-glow-intense animate-scale-in animate-delay-800">
             <div className="flex items-center justify-center mb-6">
-              <Target className="text-primary mr-3" size={40} />
+              <Target className="text-primary mr-3 hover-wiggle" size={40} />
               <h3 className="text-2xl md:text-3xl font-bold">Vision</h3>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">

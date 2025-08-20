@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap } from 'lucide-react';
-import EarlyAccessForm from './EarlyAccessForm';
 
 const HeroSection = () => {
   const handleEarlyAccess = () => {
@@ -66,18 +65,17 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animate-delay-400">
-          <EarlyAccessForm>
-            <Button 
-              variant="signal" 
-              size="lg" 
-              className="w-full sm:w-auto hover-glow-intense animate-pulse-glow"
-              style={{ border: '1px solid hsl(139 78% 63%)', boxShadow: '0 0 10px hsl(139 78% 63% / 0.3)' }}
-            >
-              <Zap className="mr-2" size={20} />
-              Join Early Access
-              <ArrowRight className="ml-2" size={20} />
-            </Button>
-          </EarlyAccessForm>
+          <Button 
+            variant="signal" 
+            size="lg" 
+            onClick={handleEarlyAccess}
+            className="w-full sm:w-auto hover-glow-intense"
+            style={{ border: '1px solid hsl(139 78% 63%)', boxShadow: '0 0 10px hsl(139 78% 63% / 0.3)' }}
+          >
+            <Zap className="mr-2" size={20} />
+            Join Early Access
+            <ArrowRight className="ml-2" size={20} />
+          </Button>
           
           <Button 
             variant="signal-outline" 
