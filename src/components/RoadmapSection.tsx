@@ -93,10 +93,10 @@ const RoadmapSection = () => {
     <section id="roadmap" className="signal-section bg-gradient-to-b from-background to-card/20">
       <div className="signal-container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in-up group">
-            <span className="signal-text-gradient animate-shimmer animate-text-glow">SIGNAL</span> Roadmap
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            <span className="signal-text-gradient">SIGNAL</span> Roadmap
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animate-delay-200 hover:text-foreground transition-colors duration-500">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Our journey to becoming the leading decentralized hedge fund protocol
           </p>
         </div>
@@ -107,12 +107,12 @@ const RoadmapSection = () => {
             const PhaseIcon = phase.icon;
             
             return (
-              <div key={index} className={`signal-card hover:signal-glow transition-all duration-500 hover-glow-intense animate-fade-in-stagger animate-delay-${(index + 1) * 100} group hover-float`}>
+              <div key={index} className="signal-card hover:signal-glow transition-all duration-500">
                 <div className="flex items-start space-x-4">
                   {/* Phase Icon */}
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors duration-300 group-hover-glow animate-morph">
-                      <PhaseIcon className="text-primary group-hover-float hover-rotate-slow" size={32} />
+                    <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl">
+                      <PhaseIcon className="text-primary" size={32} />
                     </div>
                   </div>
 
@@ -141,7 +141,7 @@ const RoadmapSection = () => {
                           <div className="flex-shrink-0 mt-2">
                             <div className="w-2 h-2 bg-primary rounded-full group-hover:scale-150 transition-transform duration-200" />
                           </div>
-                          <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-200">
+                            <p className="text-muted-foreground leading-relaxed">
                             {item}
                           </p>
                         </div>
@@ -156,9 +156,9 @@ const RoadmapSection = () => {
 
         {/* Vision Statement */}
         <div className="mt-16 text-center">
-          <div className="signal-card max-w-4xl mx-auto hover-glow-intense animate-scale-in animate-delay-800">
+          <div className="signal-card max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
-              <Target className="text-primary mr-3 hover-wiggle" size={40} />
+              <Target className="text-primary mr-3" size={40} />
               <h3 className="text-2xl md:text-3xl font-bold">Vision</h3>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
