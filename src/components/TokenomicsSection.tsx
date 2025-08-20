@@ -64,17 +64,17 @@ const TokenomicsSection = () => {
     <section id="tokenomics" className="signal-section bg-gradient-to-b from-card/20 to-background">
       <div className="signal-container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in-up">
-            <span className="signal-text-gradient">SIGNAL</span> Tokenomics
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in-up group">
+            <span className="signal-text-gradient animate-shimmer animate-text-glow">SIGNAL</span> Tokenomics
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {/* Token Overview */}
-          <div className="signal-card hover-glow-intense animate-fade-in-left animate-delay-200">
+          <div className="signal-card hover-glow-intense animate-fade-in-stagger animate-delay-200 group hover-float">
             <div className="flex items-center mb-6">
-              <Coins className="text-primary mr-3" size={24} />
-              <h3 className="text-2xl font-bold">Token Overview</h3>
+              <Coins className="text-primary mr-3 group-hover-float hover-rotate-slow" size={24} />
+              <h3 className="text-2xl font-bold group-hover:animate-text-glow">Token Overview</h3>
             </div>
             <div className="space-y-4">
               {tokenOverview.map((item, index) => (

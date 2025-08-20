@@ -93,10 +93,10 @@ const RoadmapSection = () => {
     <section id="roadmap" className="signal-section bg-gradient-to-b from-background to-card/20">
       <div className="signal-container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in-up">
-            <span className="signal-text-gradient">SIGNAL</span> Roadmap
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in-up group">
+            <span className="signal-text-gradient animate-shimmer animate-text-glow">SIGNAL</span> Roadmap
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animate-delay-200 hover:text-foreground transition-colors duration-500">
             Our journey to becoming the leading decentralized hedge fund protocol
           </p>
         </div>
@@ -107,12 +107,12 @@ const RoadmapSection = () => {
             const PhaseIcon = phase.icon;
             
             return (
-              <div key={index} className={`signal-card hover:signal-glow transition-all duration-300 hover-glow-intense animate-fade-in-right animate-delay-${(index + 1) * 100}`}>
+              <div key={index} className={`signal-card hover:signal-glow transition-all duration-500 hover-glow-intense animate-fade-in-stagger animate-delay-${(index + 1) * 100} group hover-float`}>
                 <div className="flex items-start space-x-4">
                   {/* Phase Icon */}
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl">
-                      <PhaseIcon className="text-primary" size={32} />
+                    <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors duration-300 group-hover-glow animate-morph">
+                      <PhaseIcon className="text-primary group-hover-float hover-rotate-slow" size={32} />
                     </div>
                   </div>
 
