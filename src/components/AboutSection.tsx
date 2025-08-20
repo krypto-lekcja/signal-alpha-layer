@@ -61,10 +61,10 @@ const AboutSection = () => {
       <div className="signal-container">
         {/* Main Description */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in-up">
             About <span className="signal-text-gradient">SIGNAL</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
             SIGNAL is a decentralized intelligence network for trading forecasts. We turn predictions — from 
             crypto to macro, commodities, FX, and RWAs — into verifiable, monetizable, and executable on-chain strategies.
           </p>
@@ -72,8 +72,8 @@ const AboutSection = () => {
 
         {/* What Makes SIGNAL Different */}
         <div className="mb-20">
-          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">
-            <TrendingUp className="inline-block mr-3 text-primary" size={32} />
+          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center animate-fade-in-up animate-delay-300">
+            <TrendingUp className="inline-block mr-3 text-primary hover-wiggle" size={32} />
             What makes SIGNAL different?
           </h3>
           
@@ -81,7 +81,7 @@ const AboutSection = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <div key={index} className="signal-card hover:signal-glow transition-all duration-500">
+                <div key={index} className={`signal-card hover:signal-glow transition-all duration-300 hover:scale-105 hover-glow-intense animate-fade-in-left animate-delay-${(index + 3) * 100}`}>
                   <div className="flex items-start space-x-4">
                     <div className="p-3 bg-primary/10 rounded-xl">
                       <Icon className="text-primary" size={24} />
@@ -99,8 +99,8 @@ const AboutSection = () => {
 
         {/* Who is SIGNAL for */}
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">
-            <Users className="inline-block mr-3 text-primary" size={32} />
+          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center animate-fade-in-up animate-delay-700">
+            <Users className="inline-block mr-3 text-primary hover-wiggle" size={32} />
             Who is SIGNAL for?
           </h3>
           
@@ -108,7 +108,7 @@ const AboutSection = () => {
             {userTypes.map((user, index) => {
               const Icon = user.icon;
               return (
-                <div key={index} className="signal-card text-center hover:signal-glow transition-all duration-300">
+                <div key={index} className={`signal-card text-center hover:signal-glow transition-all duration-300 hover:scale-105 hover-glow-intense animate-scale-in animate-delay-${(index + 1) * 100}`}>
                   <div className="inline-flex p-4 bg-primary/10 rounded-2xl mb-4">
                     <Icon className="text-primary" size={32} />
                   </div>
@@ -126,9 +126,9 @@ const AboutSection = () => {
 
         {/* Why SIGNAL */}
         <div className="text-center">
-          <div className="signal-card max-w-4xl mx-auto">
+          <div className="signal-card max-w-4xl mx-auto hover-glow-intense animate-scale-in animate-delay-1000">
             <div className="flex items-center justify-center mb-6">
-              <Shield className="text-primary mr-3" size={40} />
+              <Shield className="text-primary mr-3 hover-wiggle" size={40} />
               <h3 className="text-2xl md:text-3xl font-bold">Why SIGNAL?</h3>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
