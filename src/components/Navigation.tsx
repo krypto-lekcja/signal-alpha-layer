@@ -11,13 +11,17 @@ const Navigation = () => {
     { label: 'Roadmap', href: '#roadmap' },
     { label: 'WhitePaper', href: '/whitepaper.pdf', icon: FileText, external: true },
     { label: 'Pitchdeck', href: '/pitchdeck.pdf', icon: Presentation, external: true },
-    { label: 'Financials', href: '/financials.pdf', icon: BarChart3, external: true },
+    { label: 'Financials', href: '/financials', icon: BarChart3, external: false },
   ];
 
   const handleNavClick = (href: string, external?: boolean) => {
     if (external) {
       window.open(href, '_blank');
+    } else if (href.startsWith('/')) {
+      // Navigate to page route
+      window.location.href = href;
     } else {
+      // Scroll to section
       const element = document.querySelector(href);
       element?.scrollIntoView({ behavior: 'smooth' });
     }
