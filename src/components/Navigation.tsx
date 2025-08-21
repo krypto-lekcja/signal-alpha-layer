@@ -45,7 +45,7 @@ const Navigation = () => {
                 <button
                   key={item.label}
                   onClick={() => handleNavClick(item.href, item.external)}
-                  className={`flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-105 animate-fade-in-up animate-delay-${(index + 4) * 100}`}
+                  className={`flex items-center space-x-2 ${item.external ? 'text-primary' : 'text-muted-foreground'} hover:text-primary transition-colors duration-200 hover:scale-105 animate-fade-in-up animate-delay-${(index + 4) * 100}`}
                 >
                   {Icon && <Icon size={16} className="hover-wiggle" />}
                   <span className="font-medium">{item.label}</span>
@@ -73,7 +73,7 @@ const Navigation = () => {
                   <button
                     key={item.label}
                     onClick={() => handleNavClick(item.href, item.external)}
-                    className="flex items-center space-x-3 w-full text-left text-muted-foreground hover:text-primary transition-colors p-2 rounded-lg hover:bg-muted"
+                    className={`flex items-center space-x-3 w-full text-left ${item.external ? 'text-primary' : 'text-muted-foreground'} hover:text-primary transition-colors p-2 rounded-lg hover:bg-muted`}
                   >
                     {Icon && <Icon size={18} />}
                     <span className="font-medium">{item.label}</span>
