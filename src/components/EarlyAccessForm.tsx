@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import { Zap, ArrowRight, Mail, MessageCircle } from 'lucide-react';
 
 interface EarlyAccessFormProps {
@@ -38,9 +39,17 @@ const EarlyAccessForm: React.FC<EarlyAccessFormProps> = ({ children }) => {
 
     setIsSubmitting(true);
     
-    // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { error } = await supabase
+        .from('early_access_signups')
+        .insert({
+          email: email || null,
+          telegram_handle: telegramHandle || null,
+        });
+
+      if (error) {
+        throw error;
+      }
       
       toast({
         title: "Welcome to the Signal early access!",
@@ -51,6 +60,7 @@ const EarlyAccessForm: React.FC<EarlyAccessFormProps> = ({ children }) => {
       setEmail('');
       setTelegramHandle('');
     } catch (error) {
+      console.error('Error saving signup:', error);
       toast({
         title: "Something went wrong",
         description: "Please try again later.",
